@@ -9,6 +9,7 @@ import MainHeader from "@/layout/MainHeader/MainHeader";
 import { ClientProviders } from "@/providers/ClientProviders";
 import { EmotionProvider } from "@/providers/EmotionProvider";
 import PageContainer from "@/layout/PageContainer/PageContainer";
+import Footer from "@/layout/Footer/Footer";
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
@@ -22,6 +23,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
                 <main>{children}</main>
               </PageContainer>
             </MainContainer>
+            <Footer />
           </ClientProviders>
         </EmotionProvider>
       </body>

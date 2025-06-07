@@ -7,6 +7,7 @@ import { AppBar, Toolbar, Typography } from "@mui/material";
 import MobileNavigationMenu from "../MobileNavigationMenu/MobileNavigationMenu";
 import NavigationMenu from "../NavigationMenu/NavigationMenu";
 import useMainHeader from "./useMainHeader";
+import { texts } from "../texts";
 
 const MainHeader: React.FC = () => {
   const { isMobile, menuItems } = useMainHeader();
@@ -22,7 +23,7 @@ const MainHeader: React.FC = () => {
       }}
     >
       <Toolbar sx={{ justifyContent: "space-between", px: 2 }}>
-        <Typography variant="h6">Mercado Free</Typography>
+        <Typography variant="h6">{texts.ptBR.pageName}</Typography>
         {isMobile ? (
           <MobileNavigationMenu {...{ menuItems }} />
         ) : (

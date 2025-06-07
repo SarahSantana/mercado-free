@@ -1,5 +1,5 @@
 import { useMediaQuery, useTheme } from "@mui/material";
-import { texts } from "./texts";
+import { texts } from "../texts";
 import { IMenuItem } from "../types";
 
 const useMainHeader = () => {
