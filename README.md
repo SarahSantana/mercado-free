@@ -1,8 +1,17 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🛍️ Next.js Mercado Free
 
-## Getting Started
+Aplicação de vitrine de produtos com detalhe individual de cada produto, desenvolvida com:
 
-First, run the development server:
+- ✅ [Next.js 14 (App Router)](https://nextjs.org/docs)
+- ✅ [Material UI (v5)](https://mui.com/)
+- ✅ [React Query (TanStack Query v5)](https://tanstack.com/query/latest)
+- ✅ Arquitetura em camadas com princípios SOLID
+
+# Instale as dependências
+
+yarn install
+
+# Rode o servidor de desenvolvimento
 
 ```bash
 npm run dev
