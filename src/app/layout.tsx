@@ -1,22 +1,11 @@
-import { ReactQueryProvider } from "@/providers/react-query";
-import { MuiThemeProvider } from "@/providers/theme";
+import { ReactNode } from "react";
+import { ClientProviders } from "@/providers/ClientProviders";
 
-export const metadata = {
-  title: "Meu App",
-  description: "Usando Next.js com MUI e React Query",
-};
-
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="pt-br">
       <body>
-        <ReactQueryProvider>
-          <MuiThemeProvider>{children}</MuiThemeProvider>
-        </ReactQueryProvider>
+        <ClientProviders>{children}</ClientProviders>
       </body>
     </html>
   );
