@@ -287,6 +287,11 @@
     "@eslint/core" "^0.14.0"
     levn "^0.4.1"
 
+"@fontsource/manrope@^5.2.5":
+  version "5.2.5"
+  resolved "https://registry.yarnpkg.com/@fontsource/manrope/-/manrope-5.2.5.tgz#a2e98f1d879dc71f452b8641167932e1df7f6070"
+  integrity sha512-4mYUAhsuF8KoXseG8T9woWUc/foznUVluFtE6fCKAqe76WM3kmDNedaINWjzWB73+wly0duFvVpDBma3NXXT0g==
+
 "@humanfs/core@^0.19.1":
   version "0.19.1"
   resolved "https://registry.yarnpkg.com/@humanfs/core/-/core-0.19.1.tgz#17c55ca7d426733fe3c561906b8173c336b40a77"
