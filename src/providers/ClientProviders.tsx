@@ -11,8 +11,8 @@ interface Props {
 
 export function ClientProviders({ children }: Props) {
   return (
-    <ReactQueryProvider>
-      <MuiThemeProvider>{children}</MuiThemeProvider>
-    </ReactQueryProvider>
+    <MuiThemeProvider>
+      <ReactQueryProvider>{children}</ReactQueryProvider>
+    </MuiThemeProvider>
   );
 }

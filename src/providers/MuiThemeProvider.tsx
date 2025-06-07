@@ -1,33 +1,19 @@
 "use client";
 
 import { ReactNode } from "react";
-import { CacheProvider, EmotionCache } from "@emotion/react";
-import { ThemeProvider, CssBaseline, createTheme } from "@mui/material";
-import { createEmotionCache } from "./emotion-cache";
 
-const clientSideEmotionCache = createEmotionCache();
+import { theme } from "@/theme/theme";
+import { CssBaseline, ThemeProvider } from "@mui/material";
 
 interface Props {
   children: ReactNode;
-  emotionCache?: EmotionCache;
 }
 
-const theme = createTheme({
-  palette: {
-    mode: "light",
-  },
-});
-
-export function MuiThemeProvider({
-  children,
-  emotionCache = clientSideEmotionCache,
-}: Props) {
+export function MuiThemeProvider({ children }: Props) {
   return (
-    <CacheProvider value={emotionCache}>
-      <ThemeProvider theme={theme}>
-        <CssBaseline />
-        {children}
-      </ThemeProvider>
-    </CacheProvider>
+    <ThemeProvider theme={theme}>
+      <CssBaseline />
+      {children}
+    </ThemeProvider>
   );
 }
