@@ -3,6 +3,7 @@ import { Product } from "../types";
 const mockProducts: Product[] = Array.from({ length: 12 }).map((_, i) => ({
   id: String(i + 1),
   name: `Produto ${i + 1}`,
+  image: "123",
   description: `Descrição do produto ${i + 1}`,
 }));
 
