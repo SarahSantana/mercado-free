@@ -33,7 +33,7 @@ export const ProductGrid = ({
             style={{
               backgroundColor: theme.palette.pageContentBg.main,
               borderRadius: "24px",
-              marginTop: 2,
+              marginTop: "40px",
               padding: "16px 22px 24px",
             }}
           >

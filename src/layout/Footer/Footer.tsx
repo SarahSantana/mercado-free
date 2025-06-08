@@ -1,7 +1,7 @@
 import { theme } from "@/theme/theme";
-import YouTubeIcon from "@mui/icons-material/YouTube";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
+import YouTubeIcon from "@mui/icons-material/YouTube";
 import { Box, IconButton, Typography } from "@mui/material";
 
 import { texts } from "../texts";

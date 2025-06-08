@@ -1,11 +1,13 @@
 "use client";
 
+import Link from "next/link";
 import React from "react";
+
+import { theme } from "@/theme/theme";
 import PersonOutlineOutlinedIcon from "@mui/icons-material/PersonOutlineOutlined";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import { Box, Button, IconButton } from "@mui/material";
-import Link from "next/link";
-import { theme } from "@/theme/theme";
+
 import { IMenuItem } from "../types";
 
 const NavigationMenu: React.FC<{ menuItems: IMenuItem[] }> = ({
