@@ -7,14 +7,14 @@ import { Pagination, Stack, Typography } from "@mui/material";
 import Grid from "@mui/material/Grid";
 
 import { texts } from "../../texts";
-import { Product } from "../../types";
+import { IProduct } from "../../types";
 import { ProductCard } from "../ProductCard/ProductCard";
 
 export const ProductGrid = ({
   products,
   loading,
 }: {
-  products: Product[];
+  products: IProduct[];
   loading: boolean;
 }) => {
   return (
@@ -33,7 +33,7 @@ export const ProductGrid = ({
             style={{
               backgroundColor: theme.palette.pageContentBg.main,
               borderRadius: "24px",
-              marginTop: 2,
+              marginTop: "40px",
               padding: "16px 22px 24px",
             }}
           >

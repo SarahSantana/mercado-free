@@ -8,5 +8,10 @@ export const texts = {
         buttonDescription: "Ver mais",
       },
     },
+    productDetail: {
+      notFoundMessage: "Produto não encontrado",
+      information: "Informações",
+      description: "Descrições",
+    },
   },
 };

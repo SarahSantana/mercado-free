@@ -1,22 +1,20 @@
 "use client";
 
-import { useParams } from "next/navigation";
-import { CircularProgress, Typography } from "@mui/material";
+import React from "react";
 
+import NotFoundProduct from "@/features/products/components/NotFoundProduct/NotFoundProduct";
 import { ProductDetail } from "@/features/products/components/ProductDetail/ProductDetail";
-import { useProductByIdQuery } from "@/features/products/queries/useProductByIdQuery";
+import { useProductsPage } from "@/features/products/hooks/useProductsPage";
+import FullWidthLoading from "@/layout/FullWidthLoading/FullWidthLoading";
 
 export default function ProductDetailPage() {
-  const params = useParams();
-  const productId =
-    typeof params.id === "string" ? params.id : params.id?.[0] ?? "";
-  const { data: product, isLoading } = useProductByIdQuery(productId, {
-    enabled: !!productId,
-  });
+  const { productId, product, isLoading } = useProductsPage();
 
-  if (isLoading) return <CircularProgress />;
-  if (!product || !productId)
-    return <Typography>Produto não encontrado</Typography>;
-
-  return <ProductDetail product={product} />;
+  return (
+    <React.Fragment>
+      {isLoading && <FullWidthLoading />}
+      {(!product || !productId) && !isLoading && <NotFoundProduct />}
+      {!isLoading && product && <ProductDetail product={product} />}
+    </React.Fragment>
+  );
 }
