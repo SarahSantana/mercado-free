@@ -1,6 +1,6 @@
 import { Product } from "../types";
 
-const mockProducts: Product[] = Array.from({ length: 10 }).map((_, i) => ({
+const mockProducts: Product[] = Array.from({ length: 12 }).map((_, i) => ({
   id: String(i + 1),
   name: `Produto ${i + 1}`,
   description: `Descrição do produto ${i + 1}`,
