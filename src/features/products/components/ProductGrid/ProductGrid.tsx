@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { Dispatch, SetStateAction } from "react";
 
 import FullWidthLoading from "@/layout/FullWidthLoading/FullWidthLoading";
 import { theme } from "@/theme/theme";
@@ -7,21 +7,26 @@ import { Pagination, Stack, Typography } from "@mui/material";
 import Grid from "@mui/material/Grid";
 
 import { texts } from "../../texts";
-import { IProduct } from "../../types";
+import { IProductList } from "../../types";
 import { ProductCard } from "../ProductCard/ProductCard";
 
 export const ProductGrid = ({
-  products,
-  loading,
+  productList,
+  isLoading,
+  productPage,
+  setProductPage,
+  calculatePagination,
 }: {
-  products: IProduct[];
-  loading: boolean;
+  productList: IProductList | undefined;
+  isLoading: boolean;
+  productPage: number;
+  setProductPage: Dispatch<SetStateAction<number>>;
+  calculatePagination: () => number;
 }) => {
   return (
     <React.Fragment>
-      {loading ? (
-        <FullWidthLoading />
-      ) : (
+      {isLoading && <FullWidthLoading />}
+      {!isLoading && productList && (
         <React.Fragment>
           <Typography
             variant="h5"
@@ -38,7 +43,7 @@ export const ProductGrid = ({
             }}
           >
             <Grid container spacing={2}>
-              {products.map((product) => (
+              {productList?.products.map((product) => (
                 <Grid size={{ xs: 12, sm: 6, md: 3 }} key={product.id}>
                   <ProductCard product={product} />
                 </Grid>
@@ -53,7 +58,12 @@ export const ProductGrid = ({
               }}
             >
               <Stack spacing={2}>
-                <Pagination count={10} shape="rounded" />
+                <Pagination
+                  count={calculatePagination()}
+                  page={productPage}
+                  onChange={(_, value) => setProductPage(value)}
+                  shape="rounded"
+                />
               </Stack>
             </div>
           </div>
