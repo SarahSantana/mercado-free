@@ -7,9 +7,10 @@ export function useProductByIdQuery(
   id: string | null | undefined,
   options?: { enabled?: boolean }
 ) {
-  return useQuery<IProduct | null, Error>({
+  return useQuery<IProduct | null>({
     queryKey: ["product", id],
-    queryFn: () => productService.getById(id!),
+    queryFn: () => productService.getProductById(id!),
     enabled: options?.enabled ?? true,
+    refetchOnWindowFocus: false,
   });
 }

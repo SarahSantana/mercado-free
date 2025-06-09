@@ -11,9 +11,9 @@ import {
 } from "@mui/material";
 
 import { texts } from "../../texts";
-import { IProduct } from "../../types";
+import { IProductSummary } from "../../types";
 
-export const ProductCard = ({ product }: { product: IProduct }) => (
+export const ProductCard = ({ product }: { product: IProductSummary }) => (
   <Card
     sx={{
       border: "1px solid",
